@@ -20,6 +20,8 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8001
 3. **Access the application:**
 Open your browser and navigate to `http://localhost:8001`
 
+![Demo GIF](demo/app.gif)
+
 ## Features
 
 ### 🎯 Core Functionality
