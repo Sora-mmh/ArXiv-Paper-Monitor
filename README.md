@@ -20,7 +20,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8001
 3. **Access the application:**
 Open your browser and navigate to `http://localhost:8001`
 
-<video src="demo/app.mp4" width="600" autoplay loop muted></video>
+![Demo GIF](demo/app.gif)
 
 ## Features
 
