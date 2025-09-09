@@ -1,5 +1,5 @@
 arxiv_data
-static
-templates
+# static
+# templates
 __pycache__
 .vscode

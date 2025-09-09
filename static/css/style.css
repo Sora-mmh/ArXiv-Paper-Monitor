@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND - Dark gradient with red accents */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #8B0000 0%, #2c2c2c 100%); /* Deep red to dark gray */
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff; /* White text for contrast */
+}
+
+/* MAIN CONTAINER - Centered content area */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* HEADER - Card-like container with red accents */
+header {
+    background: #1a1a1a; /* Dark gray */
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(255,0,0,0.2); /* Red shadow */
+    border: 1px solid #ff4444; /* Red border */
+}
+
+/* HEADINGS - White with red accent */
+h1, h2, h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(255,0,0,0.3);
+}
+
+h1 {
+    color: #ff4444; /* Bright red for main title */
+}
+
+/* STATUS BAR - Dark with red highlights */
+.status-bar {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.status-item {
+    background: #2c2c2c; /* Dark gray */
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #ff4444;
+}
+
+.status-item strong {
+    color: #ff6b6b; /* Lighter red */
+}
+
+/* BUTTONS - Red gradient buttons */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%); /* Red gradient */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4444 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,0,0,0.3);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #666;
+}
+
+/* FILTERS SECTION - Dark with red accents */
+.filters {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(255,0,0,0.15);
+    border: 1px solid #ff4444;
+}
+
+/* CATEGORY CHIPS - Red interactive elements */
+.category-chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.chip {
+    background: #2c2c2c;
+    color: #ff6b6b;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+    border: 1px solid #ff4444;
+}
+
+.chip.active {
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    color: white;
+    font-weight: bold;
+}
+
+.chip:hover {
+    background: #ff4444;
+    color: white;
+}
+
+/* PAPERS GRID - Layout container */
+.papers-grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* PAPER CARDS - Individual paper displays */
+.paper-card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(255,0,0,0.1);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ff4444;
+}
+
+.paper-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255,0,0,0.2);
+    border-color: #ff6b6b;
+}
+
+/* NEW PAPER INDICATOR - Red "NEW" badge */
+.paper-card.new::before {
+    content: 'NEW';
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 11px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* PAPER TITLE - White with red hover */
+.paper-title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.paper-title:hover {
+    color: #ff6b6b;
+}
+
+/* AUTHORS - Light gray */
+.paper-authors {
+    color: #ccc;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* ABSTRACT - Light gray with expand functionality */
+.paper-abstract {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.paper-abstract.expanded {
+    max-height: none;
+}
+
+.expand-btn {
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.expand-btn:hover {
+    color: #ff6b6b;
+}
+
+/* META INFORMATION - Dark gray badges */
+.paper-meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.meta-item {
+    font-size: 12px;
+    color: #ccc;
+    background: #2c2c2c;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ff4444;
+}
+
+/* PAPER LINKS - Red and black buttons */
+.paper-links {
+    display: flex;
+    gap: 10px;
+}
+
+.paper-links a {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.arxiv-link {
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    color: white;
+}
+
+.arxiv-link:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff4444 100%);
+    transform: translateY(-2px);
+}
+
+.pdf-link {
+    background: #2c2c2c;
+    color: #ff4444;
+    border: 1px solid #ff4444;
+}
+
+.pdf-link:hover {
+    background: #ff4444;
+    color: white;
+}
+
+/* LOADING STATE - Red accent */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #ff6b6b;
+    font-size: 18px;
+}
+
+/* ERROR STATE - Red background */
+.error {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff6b6b;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #ff4444;
+}
+
+/* NO PAPERS STATE - Dark with red text */
+.no-papers {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    color: #ff6b6b;
+    border: 1px solid #ff4444;
+}
+
+/* RESPONSIVE DESIGN - Mobile adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    .status-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+}

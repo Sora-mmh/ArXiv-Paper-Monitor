@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArXiv Paper Monitor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 ArXiv Paper Monitor</h1>
+            <p style="color: #666; margin-top: 5px;">Real-time monitoring of latest research papers</p>
+            
+            <div class="status-bar" id="statusBar">
+                <div class="status-item">
+                    <strong>Status:</strong> <span id="fetchStatus">Initializing...</span>
+                </div>
+                <div class="status-item">
+                    <strong>Last Fetch:</strong> <span id="lastFetch">Never</span>
+                </div>
+                <div class="status-item">
+                    <strong>Papers:</strong> <span id="paperCount">0</span>
+                </div>
+                <div class="status-item">
+                    <strong>New:</strong> <span id="newCount">0</span>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button onclick="fetchNow()">🔄 Fetch Now</button>
+                <button onclick="markAllSeen()">✓ Mark All as Seen</button>
+                <button onclick="toggleAutoFetch()" id="autoFetchBtn">⏸ Pause Auto-Fetch</button>
+                <button onclick="clearData()">🗑 Clear All Data</button>
+            </div>
+        </header>
+        
+        <div class="filters">
+            <h3 style="margin-bottom: 10px;">Categories</h3>
+            <div class="category-chips" id="categoryChips">
+                <!-- Categories will be loaded here -->
+            </div>
+        </div>
+        
+        <div id="papersContainer" class="papers-grid">
+            <div class="loading">Loading papers...</div>
+        </div>
+    </div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
